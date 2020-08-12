@@ -24,8 +24,8 @@ class Repo extends React.Component {
     renderAvatar = results => {
         return(
             <div className="avatar">
-                <h1>{results[0].owner.login}</h1>
                 <img src={results[0].owner.avatar_url} className="avataricon"></img>
+                <h1>{results[0].owner.login}</h1>
             </div>
         )
     }
@@ -35,10 +35,10 @@ class Repo extends React.Component {
        
         return(
             <>
-                <h1>Github Repositories</h1>
+                <h1 className="title">GitHub Repositories</h1>
                 <SearchBar getResult={ this.getResult } />
                 { this.props.results ? this.renderAvatar(this.props.results) : "" }
-                { this.props.results ? this.renderResults(this.props.results) : <p>Search a user's repositories above</p> }
+                { this.props.results ? this.renderResults(this.props.results) : <p className="intro">Search a user's repositories above</p> }
             </>
         )
     }
