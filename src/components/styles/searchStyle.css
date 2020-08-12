@@ -1,7 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .form {
     margin: 60px 0;
 }
 
 form input {
     font-size: 20px;
+}
+
+.searchBar {
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: .5rem;
+    padding: 10px;
+    width: 300px;
+}
+
+.search {
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: .5rem;
+    background-color: rgb(77, 155, 25);
+    color: white;
+    width: 120px;
+    margin: 0 20px;
+    cursor: pointer;
 }
