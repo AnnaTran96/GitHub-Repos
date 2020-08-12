@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .results {
     margin: 0 auto;
-    width: 900px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(209, 209, 209);
     border-radius: 4px;
     padding: 40px;
 }
@@ -26,11 +31,12 @@
 
 .results a:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .avatar {
     position: absolute;
-    top: 160px;
+    top: 280px;
     left: -70px;
 }
 
@@ -45,13 +51,53 @@
 }
 
 .title {
-    border: 1px solid black;
-    background-color: black;
+    border: 1px solid rgb(54, 54, 54);
+    background-color: rgb(54, 54, 54);
     color: white;
-    height: 50px;
+    height: 80px;
     margin: 0 auto;
+}
+
+.fa-github {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    font-size: 50px;
 }
 
 .intro {
     font-size: 22px;
 }
+
+.profile {
+    text-decoration: none;
+    color: black;
+    border: 1px solid transparent;
+    border-radius: .5rem;
+    background-color: rgb(212, 212, 212);
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
+.gitName {
+    margin: 30px 0;
+}
+
+.fa-star-o {
+    margin: 40px 0;
+    font-size: 22px;
+}
+
+.fa-code-fork {
+    font-size: 26px;
+    margin-left: 80px;
+}
+
+.repos {
+    font-size: 20px;
+    margin-top: -5px;
+}
+
+
+/* MEDIA QUERIES */
+
