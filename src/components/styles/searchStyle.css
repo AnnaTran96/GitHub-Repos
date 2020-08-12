@@ -1,3 +1,7 @@
 .form {
     margin: 60px 0;
 }
+
+form input {
+    font-size: 20px;
+}

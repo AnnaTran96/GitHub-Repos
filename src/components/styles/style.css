@@ -1,6 +1,6 @@
 .results {
     margin: 0 auto;
-    width: 500px;
+    width: 900px;
     border-bottom: 1px solid gray;
     border-radius: 4px;
     padding: 40px;
@@ -26,4 +26,32 @@
 
 .results a:hover {
     text-decoration: underline;
+}
+
+.avatar {
+    position: absolute;
+    top: 160px;
+    left: -70px;
+}
+
+.avatar h1 {
+    font-size: 25px;
+}
+
+.avataricon {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    width: 50%;
+}
+
+.title {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.intro {
+    font-size: 22px;
 }
