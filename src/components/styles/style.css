@@ -1,0 +1,29 @@
+.results {
+    margin: 0 auto;
+    width: 500px;
+    border-bottom: 1px solid gray;
+    border-radius: 4px;
+    padding: 40px;
+}
+
+.results ul {
+    margin-top: 60px;
+}
+
+.results ul li {
+    display: inline;
+    list-style: none;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+.results a {
+    text-decoration: none;
+    color: rgb(29, 99, 190);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.results a:hover {
+    text-decoration: underline;
+}

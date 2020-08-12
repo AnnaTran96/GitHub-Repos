@@ -1,18 +1,26 @@
-const loadResult = ({ results }) => ({
+const loadResult = (results) => ({
     type: 'LOAD_RESULT',
-    payload: { results } 
+    payload:  results
 });
 
-export const getResult = userInput => {
+export const getResult = searchTerm => {
     return async dispatch => {
-        
         try{
-            const res = await fetch(`https://api.github.com/user/${userInput}/repos`)
-            const data = await res.json();
+            const data = await fetchGitRepo(searchTerm)
             dispatch(loadResult(data))
-            return data;
         } catch (err) {
-            console.warn(err)
+            console.warn(err.message)
         }
+    }
+}
+
+// Helpers
+const fetchGitRepo = async searchTerm => {
+    try {
+        const resp = await fetch(`https://api.github.com/users/${searchTerm}/repos`)
+        const data = await resp.json();
+        return data
+    } catch (err) {
+        throw new Error(err.message)
     }
 }

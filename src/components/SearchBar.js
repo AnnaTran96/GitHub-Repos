@@ -1,44 +1,33 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux'
+import { getResult } from '../actions/Action'
+import './styles/searchStyle.css'
 
 class SearchBar extends React.Component {
     state = {
-        userInput: "",
-        redirect: false
+        userName: "",
     }
 
     handleInput = e => {
-        this.setState({ userInput: e.target.value })
+        this.setState({ userName: e.target.value })
     }
 
     handleSubmit = e => {
         e.preventDefault();
-        fetch(`https://api.github.com/user/${e}/repos`)
-            .then(() => this.setState({redirect: true}))
-            .then( r => r.json())
+        e.target.reset();
+        this.props.getResult(this.state.userName);
     }
 
     render() {
 
-        const redirect = this.state.redirect
-        if(redirect) {
-            return(
-                    <Redirect to={{
-                        pathname: '/repo',
-                        state: ({userInput: this.state.userInput})
-                    }}/>
-                )      
-        }
         return (
             <>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" onChange={this.handleInput}></input>
+                <form onSubmit={this.handleSubmit} className="form">
+                    <input type="text" onChange={this.handleInput} placeholder="Find a repository..."></input>
                 </form>
-
-                <span>{this.state.userInput}</span>
             </>
         )
     }
 }
 
-export default SearchBar;
+export default connect(null, { getResult })(SearchBar);
